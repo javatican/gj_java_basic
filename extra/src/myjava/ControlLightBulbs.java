@@ -33,6 +33,13 @@ public class ControlLightBulbs {
     }
 
     public static void turn_on(int x) {
+        /**
+        利用bit or運算:
+        若要打開第一顆燈泡: 就與0001做bit or
+        若要打開第二顆燈泡: 就與0010做bit or
+        若要打開第三顆燈泡: 就與0100做bit or
+        若要打開第四顆燈泡: 就與1000做bit or
+        */
         if (x == 1) {
             bulbs = bulbs | 1;
         } else if (x == 2) {
@@ -45,6 +52,13 @@ public class ControlLightBulbs {
     }
 
     public static void turn_off(int x) {
+        /**
+        利用bit and及互補(Complement)運算:
+        若要關閉第一顆燈泡: 就與1110做bit and
+        若要關閉第二顆燈泡: 就與1101做bit and
+        若要關閉第三顆燈泡: 就與1011做bit and
+        若要關閉第四顆燈泡: 就與0111做bit and
+        */
         if (x == 1) {
             bulbs = bulbs & ~1;
         } else if (x == 2) {
@@ -57,6 +71,13 @@ public class ControlLightBulbs {
     }
 
     public static void print_info(int x) {
+        /**
+        利用bit and(&)運算, 
+        想要知道第一顆燈泡是否亮的, 就跟0001做bit and
+        想要知道第二顆燈泡是否亮的, 就跟0010做bit and
+        想要知道第三顆燈泡是否亮的, 就跟0100做bit and
+        想要知道第四顆燈泡是否亮的, 就跟1000做bit and
+        */
         System.out.println("目前狀態:");
         System.out.println("第一顆燈泡:" + on_or_off(x & 1));
         System.out.println("第二顆燈泡:" + on_or_off(x & 2));
