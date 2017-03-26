@@ -17,7 +17,7 @@ public class TestString {
      */
     public static void main(String[] args) {
         String x = "Hello";
-        System.out.println("x="+x);
+        System.out.println("x="+x); //+: 字串串接
     }
     
 }

@@ -17,8 +17,8 @@ public class TestInt {
     public static void main(String[] args) {
         int x = 100;
         long y = 100L; 
-        //int a = 10000000000;
-        long b = 10000000000L;
+        //int a = 10000000000; //百億, 無法存到int變數中-> overflow
+        long b = 10000000000L; //正數常數預設為int, 最大值2147483647(21.47億)
         System.out.println("x="+x+", y="+y);
         int k = 0x1F;
         System.out.println("k="+k);

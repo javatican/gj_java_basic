@@ -10,18 +10,17 @@ package myjava;
  * @author ryannieh
  */
 public class BitwiseDemo {
+
     public static void main(String[] args) {
-        byte i = 13;
-        byte j = 12;
-        System.out.println(Integer.toBinaryString(i));
-        System.out.println(Integer.toBinaryString(j));
-        System.out.println("變數值...");
-        System.out.println(" i = " + i);
-        System.out.println(" j = " + j);
-        System.out.println("位元運算...");
-        System.out.println(" i & j = " + (i & j));
-        System.out.println(" i | j = " + (i | j));
-        System.out.println(" i ^ j = " + (i ^ j));
-        System.out.println(" ~i = " + (~i));
+        int x = 13;
+        int y = 12;
+        System.out.println("x的bit表示:" + Integer.toBinaryString(x));
+        System.out.println("y的bit表示:" + Integer.toBinaryString(y));
+        System.out.println("x=" + x + ",y" + y);
+        System.out.println("x & y =" + (x & y));
+        System.out.println("x|y=" + (x | y));
+        System.out.println("x^y = " + (x ^ y));
+        System.out.println("~x = " + (~x)); //~x 等於 -14
+        System.out.println("-14的bit表示:" + Integer.toBinaryString(-14));
     }
 }

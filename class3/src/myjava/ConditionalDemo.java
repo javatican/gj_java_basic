@@ -10,23 +10,32 @@ package myjava;
  * @author ryannieh
  */
 public class ConditionalDemo {
+
     public static void main(String[] args) {
-        int i = 2;
-        int j = 3;
-        int k = 4;
-        System.out.println("變數值...");
-        System.out.println(" i = " + i);
-        System.out.println(" j = " + j);
-        System.out.println(" k = " + k);
-// && 運算
-        System.out.println("且...");
-        System.out.println(" i < j 且 i < k " + ((i < j) && (i < k)));
-//小心!兩個&喔!
-// || 運算
-        System.out.println("或...");
-        System.out.println(" i < j 或 k > j " + ((i < j) || (k > j)));
-// ! 運算
-        System.out.println("非...");
-        System.out.println(" i < j 的非 " + (!(i < j)));
+        int x = 99;
+        int y = 100;
+        System.out.println("x>y =" + (x > y));
+        System.out.println("x<y =" + (x < y));
+        System.out.println("x>=y =" + (x >= y));
+        System.out.println("x<=y =" + (x <= y));
+        System.out.println("x==y =" + (x == y));
+        System.out.println("x!=y =" + (x != y));
+        if (x > y) {
+            System.out.println("x大於y");
+        } else {
+            System.out.println("x小於或等於y");
+        }
+        if (x > 0 && y > 0) {
+            System.out.println("x,y都大於0");
+        }
+        if (x < 0 && y < 0) {
+            System.out.println("x,y都小於0");
+        }
+        if (x > 0 || y > 0) {
+            System.out.println("x大於0或y大於0");
+        }
+        if (!(x > y)) {
+            System.out.println("x沒有大於y");
+        }
     }
 }
